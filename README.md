@@ -220,34 +220,34 @@ Step 6: End the program.
 
 ## PROGRAM
 ```
- int main() {
+ #include <stdio.h>
+
+int main() {
     int i, n;
     int arr[10];
     int *parr = arr;
-    printf("Enter number of elements (max 10): ");
+    
+    printf("Enter the number of elements: ");
     scanf("%d", &n);
-    if (n < 1 || n > 10) {
-        printf("Invalid input. Please enter a number between 1 and 10.\n");
-        return 1;
-    }
+    
     printf("Enter %d elements:\n", n);
     for (i = 0; i < n; i++) {
-        printf("Element %d: ", i + 1);
-        scanf("%d", (parr + i));
+        scanf("%d", parr + i);
     }
-    printf("The array elements are:\n");
+    
+    printf("The elements in the array are:\n");
     for (i = 0; i < n; i++) {
- printf("%d ", *(parr + i));
- }
- printf("\n");
- return 0;
- }
+        printf("%d ", *(parr + i));
+    }
+    printf("\n");
+    
+    return 0;
+}
 ```
 
 ## OUTPUT
 
-![Screenshot 2025-05-21 085406](https://github.com/user-attachments/assets/d0afe33a-6ac3-4e9b-bac4-1b347c7bd1b6)
-
+![Screenshot 2025-06-02 164508](https://github.com/user-attachments/assets/16501be0-400f-4f8a-a964-cc552ed11fc3)
 
  
 
